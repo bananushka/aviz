@@ -1,0 +1,40 @@
+/* Global */
+.container {
+  font-size: 2rem;
+}
+
+.container ol, .container ul {
+  font-size: 1.6rem;
+}
+
+video {
+  vertical-align: top;
+}
+
+.download-link {
+  font-size: 0.7em;
+}
+
+/* Hover Dropdown Menu */
+.hover-dropdown {
+  display: none;
+}
+
+.hover-dropdown-link:hover ~ .hover-dropdown {
+  display: block;
+}
+
+.hover-dropdown:hover {
+  display: block;
+}
+
+
+/* Catalog link */
+.catalog-link video {
+  vertical-align: middle;
+}
+
+.main-list {
+  font-size: 2rem;
+  padding: 0.6rem 0;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Crystal Defects Catalog
+       :: Helper Scripts 
+       :: filter_atom.py 
+    </title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css"/>
+  </head>
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Crystal Defects Catalog</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="../index.html"
+              >
+              Home
+            </a>
+          </li>
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="../catalog.html"
+              >
+              Catalog
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="../catalog/split.html"
+                  >
+                    Split-interstitial
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="../catalog/split-formation.html"
+                  >
+                    Split-interstitial formation
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="../catalog/amorphous.html"
+                  >
+                    Amorphous solid
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li
+            class="active"
+          >
+            <a class="hover-dropdown-link"
+                href="../scripts.html"
+              >
+              Helper Scripts
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="change_center.html"
+                  >
+                    change_center.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="filter_in.html"
+                  >
+                    filter_in.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="extract_box.html"
+                  >
+                    extract_box.py
+                  </a>
+                </li>
+                <li
+                  class="active"
+                >
+                  <a href="filter_atom.html"
+                  >
+                    filter_atom.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="counter.html"
+                  >
+                    counter.py
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="javascript:"
+              >
+              Useful Links
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="http://phony1.technion.ac.il/~aviz/"
+                  >
+                    AViz Home-page
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="http://phycomp.technion.ac.il/~phr76ja/viztut/vizexamp.html"
+                      title="Example page with a tutorial on how to use AViz"
+                  >
+                    AViz Example
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="http://phony1.technion.ac.il/~phr76ja/plugfest/linkref.html"
+                      title="Collection of many AViz files"
+                  >
+                    AViz Plugfest
+                  </a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li
+          >
+            <a class="hover-dropdown-link" href="../about.html">
+              About
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="../about/aviz.html">
+                    AViz
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="../about/me.html">
+                    Me
+                  </a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container"><h1 id="-filter_atom-py-"><a class="header-link" href="#-filter_atom-py-"></a><code>filter_atom.py</code></h1>
+<p>A script to keep only atoms of certain type(s).</p>
+<pre class="hljs"><code>$ filter_atom.py -<span class="hljs-built_in">h</span>
+
+usage: filter_atom.py [-<span class="hljs-keyword">h</span>] -a ATOM [input_file] [output_file]
+
+positional arguments:
+  input_file            <span class="hljs-keyword">by</span> default, reads from stdin
+  output_file           <span class="hljs-keyword">by</span> default, writes to stdout
+
+optional arguments:
+  -<span class="hljs-keyword">h</span>, --<span class="hljs-keyword">help</span>            show this <span class="hljs-keyword">help</span> message and <span class="hljs-keyword">exit</span>
+  -a ATOM, --atom ATOM  could be used multiple times (to <span class="hljs-keyword">keep</span> <span class="hljs-keyword">more</span> than <span class="hljs-keyword">one</span>
+                        atom)</code></pre><p><a href="../assets/generated/scripts.tar.gz">Download scripts</a></p>
+  </div>
+
+  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>-->
+  <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

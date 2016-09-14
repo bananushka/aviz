@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Crystal Defects Catalog
+       :: About 
+       :: AViz 
+    </title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css"/>
+  </head>
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Crystal Defects Catalog</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="../index.html"
+              >
+              Home
+            </a>
+          </li>
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="../catalog.html"
+              >
+              Catalog
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="../catalog/split.html"
+                  >
+                    Split-interstitial
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="../catalog/split-formation.html"
+                  >
+                    Split-interstitial formation
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="../catalog/amorphous.html"
+                  >
+                    Amorphous solid
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="../scripts.html"
+              >
+              Helper Scripts
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="../scripts/change_center.html"
+                  >
+                    change_center.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="../scripts/filter_in.html"
+                  >
+                    filter_in.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="../scripts/extract_box.html"
+                  >
+                    extract_box.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="../scripts/filter_atom.html"
+                  >
+                    filter_atom.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="../scripts/counter.html"
+                  >
+                    counter.py
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="javascript:"
+              >
+              Useful Links
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="http://phony1.technion.ac.il/~aviz/"
+                  >
+                    AViz Home-page
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="http://phycomp.technion.ac.il/~phr76ja/viztut/vizexamp.html"
+                      title="Example page with a tutorial on how to use AViz"
+                  >
+                    AViz Example
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="http://phony1.technion.ac.il/~phr76ja/plugfest/linkref.html"
+                      title="Collection of many AViz files"
+                  >
+                    AViz Plugfest
+                  </a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li
+            class="active"
+          >
+            <a class="hover-dropdown-link" href="../about.html">
+              About
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                  class="active"
+                >
+                  <a href="aviz.html">
+                    AViz
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="me.html">
+                    Me
+                  </a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container"><h1 id="about-aviz-atomic-visualisation"><a class="header-link" href="#about-aviz-atomic-visualisation"></a>About AViz - Atomic visualisation</h1>
+<p>AViz is an atomistic simulation visualization software<a href="http://phony1.technion.ac.il/~aviz/" title="AViz home page">¹</a>. It was developed in the Technion, IIT, Haifa. It accepts text files as input with a simple format of</p>
+<pre class="hljs"><code><span class="hljs-section">&lt;atom name&gt;</span> <span class="hljs-section">&lt;x coordinate&gt;</span> <span class="hljs-section">&lt;y coordinate&gt;</span> <span class="hljs-section">&lt;z coordinate&gt;</span></code></pre><p>and renders the files (usually representing crystals or other ordered structures) as a pseudo 3D image. The user can configure how to show the different atoms and bonds, and there also options for displaying the atom&#39;s spin (or other properties). Explicit examples of AViz files are available to download throughout the <a href="../catalog.html">catalog</a>.</p>
+<p>&nbsp;</p>
+<p>AViz has a function for automatically capturing (auto-snap) an image of the rendering anytime any parameter changes (such as the point-of-view angle), thus making it easy to create movies (or .gif files) of looking around the structure. I used <code>ffmpeg</code> to transform the generated images (.png files) to a lightweight .mp4 file with the following command:</p>
+<pre class="hljs"><code><span class="hljs-selector-tag">ffmpeg</span> <span class="hljs-selector-tag">-i</span> <span class="hljs-selector-tag">amorphous0</span>%03<span class="hljs-selector-tag">d</span><span class="hljs-selector-class">.png</span> <span class="hljs-selector-tag">-c</span><span class="hljs-selector-pseudo">:v</span> <span class="hljs-selector-tag">libx264</span> <span class="hljs-selector-tag">out</span><span class="hljs-selector-class">.mp4</span></code></pre><p>assuming the names of the files follow the pattern <code>amorphous0XXX.png</code>. Since by default AViz divides the point-of-view angle to 360 parts (as in degrees), usually only 359 images are needed to create this kind of &quot;surrounding&quot; view.</p>
+<p>&nbsp;</p>
+<p>Another important feature that used to generate animations of changing crystals is the file-list option of AViz. The program can accept a simple text file containing a list of .xyz files, and then show them (with the same rendering configurations) one by one. Which, in combination with the auto-snap, produces a list of images that can be combined to create the animated visualization. This used, for example, in the <a href="../catalog/split-formation.html">split-interstitial formation page</a> in the catalog.</p>
+  </div>
+
+  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>-->
+  <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

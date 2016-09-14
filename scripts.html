@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Crystal Defects Catalog
+       :: Helper Scripts 
+      
+    </title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/main.css"/>
+  </head>
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Crystal Defects Catalog</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="index.html"
+              >
+              Home
+            </a>
+          </li>
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="catalog.html"
+              >
+              Catalog
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="catalog/split.html"
+                  >
+                    Split-interstitial
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="catalog/split-formation.html"
+                  >
+                    Split-interstitial formation
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="catalog/amorphous.html"
+                  >
+                    Amorphous solid
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li
+            class="active"
+          >
+            <a class="hover-dropdown-link"
+                href="scripts.html"
+              >
+              Helper Scripts
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="scripts/change_center.html"
+                  >
+                    change_center.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="scripts/filter_in.html"
+                  >
+                    filter_in.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="scripts/extract_box.html"
+                  >
+                    extract_box.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="scripts/filter_atom.html"
+                  >
+                    filter_atom.py
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="scripts/counter.html"
+                  >
+                    counter.py
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li
+          >
+            <a class="hover-dropdown-link"
+                href="javascript:"
+              >
+              Useful Links
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="http://phony1.technion.ac.il/~aviz/"
+                  >
+                    AViz Home-page
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="http://phycomp.technion.ac.il/~phr76ja/viztut/vizexamp.html"
+                      title="Example page with a tutorial on how to use AViz"
+                  >
+                    AViz Example
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="http://phony1.technion.ac.il/~phr76ja/plugfest/linkref.html"
+                      title="Collection of many AViz files"
+                  >
+                    AViz Plugfest
+                  </a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li
+          >
+            <a class="hover-dropdown-link" href="about.html">
+              About
+                <b class="caret"></b>
+            </a>
+            <ul class="hover-dropdown dropdown-menu">
+                <li
+                >
+                  <a href="about/aviz.html">
+                    AViz
+                  </a>
+                </li>
+                <li
+                >
+                  <a href="about/me.html">
+                    Me
+                  </a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container"><h1 id="scripts"><a class="header-link" href="#scripts"></a>Scripts</h1>
+<p>Since I had many AViz files to process, I developed a few python scripts to process them automatically:</p>
+<ol class="list">
+  <li class="main-list">
+    <a href="scripts/change_center.html"><code>change_center.py</code></a>:
+    A script to translate all atoms in a file around a new center.
+  </li>
+  <li class="main-list">
+    <a href="scripts/filter_in.html"><code>filter_in.py</code></a>:
+    A script to remove any atoms outside of a box around (0, 0, 0).
+  </li>
+  <li class="main-list">
+    <a href="scripts/extract_box.html"><code>extract_box.py</code></a>:
+    A script that combines `change_center.py` and `filter_in.py`, with an additional option to return the file to its original coordinates after the filtering.
+  </li>
+  <li class="main-list">
+    <a href="scripts/filter_atom.html"><code>filter_atom.py</code></a>:
+    A script to keep only atoms of certain type(s).
+  </li>
+  <li class="main-list">
+    <a href="scripts/counter.html"><code>counter.py</code></a>:
+    A script that returns some statistics about the AViz file (list of different atoms, range of coordinates).
+  </li>
+</ol>
+
+<p>I also developed a small framework to help write these scripts in a more streamlined fashion.
+The scripts are available to download at <a href="assets/generated/scripts.tar.gz">this link</a>.</p>
+  </div>
+
+  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>-->
+  <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
