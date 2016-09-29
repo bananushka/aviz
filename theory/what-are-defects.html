@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Crystal Defects Catalog
-       :: Catalog 
-       :: Split-Interstitial 
+       :: Theory 
+       :: What Are Defects 
     </title>
     <link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="../assets/css/pilcrow.css"/>
@@ -38,6 +38,7 @@
             </a>
           </li>
           <li
+            class="active"
           >
             <a class="hover-dropdown-link"
                 href="../theory.html"
@@ -47,22 +48,23 @@
             </a>
             <ul class="hover-dropdown dropdown-menu">
                 <li
+                  class="active"
                 >
-                  <a href="../theory/what-are-defects.html"
+                  <a href="what-are-defects.html"
                   >
                     What Are Defects
                   </a>
                 </li>
                 <li
                 >
-                  <a href="../theory/how-can-we-observe-defects.html"
+                  <a href="how-can-we-observe-defects.html"
                   >
                     How Can We Observe Defects
                   </a>
                 </li>
                 <li
                 >
-                  <a href="../theory/grain.html"
+                  <a href="grain.html"
                   >
                     Grain Boundaries
                   </a>
@@ -70,7 +72,6 @@
             </ul>
           </li>
           <li
-            class="active"
           >
             <a class="hover-dropdown-link"
                 href="../catalog.html"
@@ -80,23 +81,22 @@
             </a>
             <ul class="hover-dropdown dropdown-menu">
                 <li
-                  class="active"
                 >
-                  <a href="split.html"
+                  <a href="../catalog/split.html"
                   >
                     Split-Interstitial
                   </a>
                 </li>
                 <li
                 >
-                  <a href="split-formation.html"
+                  <a href="../catalog/split-formation.html"
                   >
                     Split-Interstitial Formation
                   </a>
                 </li>
                 <li
                 >
-                  <a href="amorphous.html"
+                  <a href="../catalog/amorphous.html"
                   >
                     Amorphous Solid
                   </a>
@@ -211,26 +211,34 @@
     </div>
   </nav>
 
-  <div class="container"><h1 id="split-interstitial-defect"><a class="header-link" href="#split-interstitial-defect"></a>Split-interstitial defect</h1>
-<p>
-  <video loop onclick="NS.toggle(this)" width="900" title="Click to play/pause">
-    <source src="../assets/catalog/split.mp4" type="video/mp4" />
-  </video>
-  
-
-
-  <a href="../assets/catalog/split.tar.gz" class="download-link">
-    Download AViz files
-  </a>
-  </p>
-<p>A crystal defect in which a displaced atom forms a bond with a normal atom in such a away that neither atom is on the normal site but the two are symmetrically displaced from it<a href="#footnote-1" id="back-1"><sup>1</sup></a>.</p>
-<p>This example was taken from the <a href="http://phycomp.technion.ac.il/~phr76ja/viztut/vizexamp.html">AViz tutorial page</a>.</p>
+  <div class="container"><h1 id="what-are-defects"><a class="header-link" href="#what-are-defects"></a>What Are Defects</h1>
+<p>Defects are small impurities in otherwise perfect crystals. When describing crystalline solids we usually say that they exhibit a periodic crystal structure (a Bravais lattice), i.e. the cells (atoms or molecules) are arranged in a repeating pattern, which is symmetrical to discrete translations (determined by the unit cell&#39;s size). However, in nature we often see that the arrangement isn&#39;t perfect, and that some cells are misplaced (or missing) - this can happen at a single point in the lattice, or in large areas such as lines and even planes.</p>
+<h2 id="different-types-of-defects"><a class="header-link" href="#different-types-of-defects"></a>Different Types of Defects</h2>
+<p>Defects can be grouped into two basic groups, according to their geometry:</p>
+<ul class="list">
+<li>Single point defects: these include vacancy defects and interstitial defects.<ul class="list">
+<li>Vacancy defects are lattice sites which would be occupied in a perfect crystals but are vacant. This can be found occurring naturally, but can also be created in lab using irradiation, for example.</li>
+<li>Interstitial defects are lattice sites which should be empty, but are occupied by an atom.</li>
+</ul>
+</li>
+<li>Line and plane defects: these include dislocations, grain boundaries and other bulk defects:<ul class="list">
+<li>Dislocations happen when a line of atoms (rather than a single one) is misaligned. Dislocations are commonly divided into edge dislocations - dislocations that appear when a plane is terminated abruptly in the middle of the crystal - and screw dislocations - which are hard to visualize, but can be described as structure with a helical path traced around the dislocation line.</li>
+<li>Grain boundaries are areas in the crystal where its crystallographic direction suddenly changes. They are described more in depth on the <a href="grain.html">Grain Boundaries page</a>.</li>
+<li>Bulk defects are normally described as macroscopic defects (such as cracks) or a cluster of other defects (e.g. a void which is a cluster of vacancies).</li>
+</ul>
+</li>
+</ul>
+<p>Of course, many other defects exist, some of which are merely combinations of defects mentioned above.</p>
+<h2 id="pros-and-cons-of-working-with-defects"><a class="header-link" href="#pros-and-cons-of-working-with-defects"></a>Pros and Cons of Working with Defects</h2>
+<p>The problems and disadvantages of working with defects are pretty clear: They&#39;re hard to describe accurately - since defects break the perfect periodic nature of the crystal, they also break its periodic potentials. This means adjustments must be made around the defect site when it&#39;s a single point, and when it&#39;s a plane or line defect, whole planes of atoms must be taken into consideration and re-evaluted. This is very difficult to do by hand (even approximately), but also expensive when done by a computer. The additional time needed to write the program, as well as to run it can be overwhelming.</p>
+<p>However, as explained above, defects are commonplace when studying real-world crystals, and for that alone it is important to consider and explore them. But are there also advantages to defects? Can they be used for a practical reason?</p>
+<p>The short answer is yes, but in a very limited way. The most popular usage for defects in using an <abbr title="Nitrogen-vacancy center">NV</abbr> defect for quantum computing. Its robustness makes it a perfect candidate - its quantum state is easy to initialize, manipulate and measure<a href="#footnote-1" id="back-1"><sup>1</sup></a>.</p>
 <hr>
 <p>
   <ul>
     
   <li>
-    <a href="#back-1" id="footnote-1"><strong>1:</strong></a> <a href="http://encyclopedia2.thefreedictionary.com/split+interstitial">http://encyclopedia2.thefreedictionary.com/split+interstitial</a>
+    <a href="#back-1" id="footnote-1"><strong>1:</strong></a> <a href="https://arxiv.org/abs/1003.1754">Quantum computing with defects (J. R. Weber, W. F. Koehl, J. B. Varley, A. Janotti, B. B. Buckley, C. G. Van de Walle, D. D. Awschalom)</a>
   </li>
   
   </ul>

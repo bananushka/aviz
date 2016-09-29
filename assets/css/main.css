@@ -3,10 +3,6 @@
   font-size: 2rem;
 }
 
-.container ol, .container ul {
-  font-size: 1.6rem;
-}
-
 video {
   vertical-align: top;
 }
@@ -39,11 +35,20 @@ video {
   padding: 0.6rem 0;
 }
 
+.analog-experiment-image {
+  width: 560px;
+  border: 2px solid black;
+}
+
 /* Resiez videos for mobile */
 @media only screen
 and (min-width : 320px)
 and (max-width : 480px) {
   video {
-    width: 320px;
+    max-width: 320px;
+  }
+
+  .analog-experiment-image {
+    max-width: 320px;
   }
 }
