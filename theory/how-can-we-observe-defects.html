@@ -213,46 +213,78 @@
 
   <div class="container"><h1 id="how-can-we-observe-defects"><a class="header-link" href="#how-can-we-observe-defects"></a>How Can We Observe Defects</h1>
 <h2 id="in-experiments"><a class="header-link" href="#in-experiments"></a>In Experiments</h2>
+<p>Since defects in (natural occurring) crystals is the norm, observing them should a simple matter of putting the crystal under the microscope (or any other imaging device). One popular device in the TEM - Transmission Electron Microscope<a href="#footnote-1" id="back-1"><sup>1</sup></a>. Also, since the images of crystals tend to be quite large, developing a method for automatically identify some defects could prove beneficial, as described in the aforementioned article. The results are easy to see:</p>
+<ol class="list">
+<li><p>Stages of processing the raw TEM image:
+<img src="../assets/experiments/esley-1.png" alt="Processing the raw image using a distortion map" class="wide image" /></p>
+</li>
+<li><p>Identifying several defects in the crystal:
+<img src="../assets/experiments/esley-2.png" alt="Identifying several defects" class="wide image" /></p>
+</li>
+</ol>
 <h2 id="in-analog-experiments"><a class="header-link" href="#in-analog-experiments"></a>In Analog Experiments</h2>
-<p>A transparent plastic box with glass balls can be used to demonstrate crystalline structures. By slowly shaking the box, one can achieve different structures and defects - a perfect crystal, a crystal with vacancy defects, a crystal with dislocation defects and others. For interstitial defect, one can use larger plastic balls, so that a smaller glass ball could fit between them.</p>
+<p>A transparent plastic box with glass balls can be used to demonstrate crystalline structures. By slowly shaking the box, one can achieve different structures and defects - a perfect crystal, a crystal with vacancy defects, a crystal with dislocation defects and others. This process of slowly shaking the box of balls until they restructure themselves is somewhat akin to <a href="https://en.wikipedia.org/wiki/Annealing_%28metallurgy%29">annealing</a>. For interstitial defect, one can use larger plastic balls, so that a smaller glass ball could fit between them.</p>
 <p>
   <h3>Example A</h3>
   An almost perfect crystal, with some amorphous defects near the bottom.</p>
 <p>  
-  <img src="../assets/analog/almost-perfect-amorphous.jpg" class="analog-experiment-image" alt="An almost perfect crystal, with some amorphous defects near the bottom." title="An almost perfect crystal, with some amorphous defects near the bottom." />
+  <img src="../assets/analog/almost-perfect-amorphous.jpg" class="image" alt="An almost perfect crystal, with some amorphous defects near the bottom." title="An almost perfect crystal, with some amorphous defects near the bottom." />
   
 
   <h3>Example B</h3>
   A simple vacancy defect.</p>
 <p>  
-  <img src="../assets/analog/vacancy-defect.jpg" class="analog-experiment-image" alt="A simple vacancy defect." title="A simple vacancy defect." />
+  <img src="../assets/analog/vacancy-defect.jpg" class="image" alt="A simple vacancy defect." title="A simple vacancy defect." />
   
 
   <h3>Example C</h3>
-  A bit amoprhous crystal, with grain boundaries.</p>
+  A bit amoprhous crystal.</p>
 <p>  
-  <img src="../assets/analog/amorphous-grain.jpg" class="analog-experiment-image" alt="A bit amoprhous crystal, with grain boundaries." title="A bit amoprhous crystal, with grain boundaries." />
+  <img src="../assets/analog/amorphous-grain.jpg" class="image" alt="A bit amoprhous crystal." title="A bit amoprhous crystal." />
   
 
   <h3>Example D</h3>
   A crystal with a dislocation defect, a void defect and a simple vacancy.</p>
 <p>  
-  <img src="../assets/analog/void-vacancy-dislocation.jpg" class="analog-experiment-image" alt="A crystal with a dislocation defect, a void defect and a simple vacancy." title="A crystal with a dislocation defect, a void defect and a simple vacancy." />
+  <img src="../assets/analog/void-vacancy-dislocation.jpg" class="image" alt="A crystal with a dislocation defect, a void defect and a simple vacancy." title="A crystal with a dislocation defect, a void defect and a simple vacancy." />
   
 
   <h3>Example E</h3>
-  A dislocation defect and grain boundaries.</p>
+  A dislocation defect and amorhpous edges.</p>
 <p>  
-  <img src="../assets/analog/dislocation-grain.jpg" class="analog-experiment-image" alt="A dislocation defect and grain boundaries." title="A dislocation defect and grain boundaries." />
+  <img src="../assets/analog/dislocation-grain.jpg" class="image" alt="A dislocation defect and amorhpous edges." title="A dislocation defect and amorhpous edges." />
   
 
   <h3>Example F</h3>
   An interstitial defect.</p>
 <p>  
-  <img src="../assets/analog/interstitial.jpg" class="analog-experiment-image" alt="An interstitial defect." title="An interstitial defect." />
+  <img src="../assets/analog/interstitial.jpg" class="image" alt="An interstitial defect." title="An interstitial defect." />
   
 </p>
 <h2 id="using-simulations"><a class="header-link" href="#using-simulations"></a>Using Simulations</h2>
+<p>In the <a href="../catalog.html">Catalog</a> section, there are some visualizations of different defects in crystals, but how are these visualizations obtained? Normally, another program does the heavy lifting of calculating the exact locations of the cells in an impure crystal, and outputs those locations to a text file (as described in the <a href="../about/aviz.html">About AViz</a> section).</p>
+<p>For example, one can use <a href="http://lammps.sandia.gov/" title="Large-scale Atomic/Molecular Massively Parallel Simulator">LAMMPS</a> to compute the unit cells&#39; position in the crystal, as well as other properties such as potential energy. Such usage can be found in Eran Zvulun&#39;s <a href="http://phelafel.technion.ac.il/~zvulun/zvulun_PROJ_Intro.html">project</a>, which aims to reproduce the silicon nitride lattice, and to simulate the diffusion of several defects. The result is then visulized using AViz, producing (among others) the following animated gifs:
+  <h3>Lattice Visulization</h3>
+  A silicon-nitride lattice</p>
+<p>  
+  <img src="http://phelafel.technion.ac.il/~zvulun/Si3N4H_RND.gif" class="image" alt="A silicon-nitride lattice" title="A silicon-nitride lattice" />
+  
+  <h3>Silicon-nitride with hydrogen defect</h3>
+  NVT (canonical) ensemble simulation of (Si₃N₄)₀.₉₉₇₄H₀.₀₀₂₆</p>
+<p>  
+  <img src="http://phelafel.technion.ac.il/~zvulun/NVT_H.gif" class="image" alt="NVT (canonical) ensemble simulation of (Si₃N₄)₀.₉₉₇₄H₀.₀₀₂₆" title="NVT (canonical) ensemble simulation of (Si₃N₄)₀.₉₉₇₄H₀.₀₀₂₆" />
+  
+</p>
+<hr>
+<p>
+  <ul>
+    
+  <li>
+    <a href="#back-1" id="footnote-1"><strong>1:</strong></a> Elsey, M., & Wirth, B. (2014). Fast automated detection of crystal distortion and crystal defects in polycrystal images. Multiscale Modeling & Simulation, 12(1), 1-24.
+  </li>
+  
+  </ul>
+  </p>
   </div>
 
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

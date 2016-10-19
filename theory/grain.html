@@ -212,8 +212,44 @@
   </nav>
 
   <div class="container"><h1 id="grain-boundaries"><a class="header-link" href="#grain-boundaries"></a>Grain Boundaries</h1>
+<p>A grain boundary in a crystalline structure is an abrupt change of direction in the lattice. It can also be thought of as an interface area between two grains of the crystal (i.e. crystallites) in a polycrystalline solid.</p>
 <h2 id="in-experiments"><a class="header-link" href="#in-experiments"></a>In Experiments</h2>
+<p>Using high-resolution transmission electron microscopy (HRTEM), researchers obtained structure images of a crystal<a href="#footnote-1" id="back-1"><sup>1</sup></a>, which clearly shows the grain boundaries between two sub-lattices in the crystal, each with a different crystallographic direction:</p>
+<p class="img-container"><img src="../assets/grain/deformation.jpg" alt="Deformation image" class="image" /></p>
 <h2 id="using-simulations"><a class="header-link" href="#using-simulations"></a>Using Simulations</h2>
+<p>In order to simulate a grain boundary we need first to understand two things - which conditions are necessary to the creation of grain boundaries, and how to calculate a crystal&#39;s structure based on these conditions. One method to calculate a crystal&#39;s shape is using the Wulff construction. The construction relies on two theorems:</p>
+<ol class="list">
+<li>A crystal will arrange itself such that its surface Gibbs free energy is minimal<a href="#footnote-2" id="back-2"><sup>2</sup></a>.</li>
+<li>Gibbs free energy per surface unit area is proportional to its distance from the center of the crystal<a href="#footnote-3" id="back-3"><sup>3</sup></a>.</li>
+</ol>
+<p>Together these allow us to find the crystal&#39;s shape. When considering a polycrystalline solid we must consider another source of surface energy - the interaction between two parts of crystal, i.e. the additional energy caused due to the grain boundary. By using the symbolic math features of Matlab (for example) one can construct the crystal&#39;s shape.</p>
+<p>An example of just such process can be found in Lilach Saltoun&#39;s project for Joan Adler<a href="#footnote-4" id="back-4"><sup>4</sup></a>:
+<img src="../assets/grain/wulff-construction.png" alt="Wulff construction image" class="wide image" /></p>
+<p>Where NL is the number of particles in the crystal.</p>
+<p>By using this Lilach also obtains an image of two planes of the crystals and the grain boundary between them:
+<img src="../assets/grain/lilach-grain.png" alt="Simulated grain boundary image" class="wide image" /></p>
+<hr>
+<p>
+  <ul>
+    
+  <li>
+    <a href="#back-1" id="footnote-1"><strong>1:</strong></a> Liao, X. Z., Zhao, Y. H., Srinivasan, S. G., Zhu, Y. T., Valiev, R. Z., & Gunderov, D. V. (2004). Deformation twinning in nanocrystalline copper at room temperature and low strain rate. Applied physics letters, 84(4), 592-594.
+  </li>
+  
+  <li>
+    <a href="#back-2" id="footnote-2"><strong>2:</strong></a> Gibbs, Collected Works, 1928
+  </li>
+  
+  <li>
+    <a href="#back-3" id="footnote-3"><strong>3:</strong></a> G Wulff, Zeitschrift fur Krystallographie und Mineralogie, 34, 5/6, pp 449-530, 1901.
+  </li>
+  
+  <li>
+    <a href="#back-4" id="footnote-4"><strong>4:</strong></a> <a href="http://phony1.technion.ac.il/~lilach/index.html">Wulff construction and grain boundary in HCP crystals</a>
+  </li>
+  
+  </ul>
+  </p>
   </div>
 
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -35,9 +35,13 @@ video {
   padding: 0.6rem 0;
 }
 
-.analog-experiment-image {
+.image {
   width: 560px;
   border: 2px solid black;
+}
+
+.wide.image {
+  width: 860px;
 }
 
 /* Resiez videos for mobile */
@@ -48,7 +52,7 @@ and (max-width : 480px) {
     max-width: 320px;
   }
 
-  .analog-experiment-image {
+  .image {
     max-width: 320px;
   }
 }
